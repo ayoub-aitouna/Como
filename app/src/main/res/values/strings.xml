@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Como</string>
+    <string name="file_limit_size_upload_format">File limit Size Upload format</string>
+    <string name="User_ID">user_id</string>
+    <string name="Welcome">Welcome To Como</string>
+
+
+    <string-array name="Gender_array">
+        <item>Female</item>
+        <item>Male</item>
+
+    </string-array>
+</resources>

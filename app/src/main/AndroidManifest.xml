@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.come.live">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.FLASHLIGHT" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="com.android.vending.BILLING" />
+
+    <uses-feature
+        android:name="android.hardware.camera.any"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.flash"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.camera.front"
+        android:required="false" />
+    <uses-feature android:name="android.hardware.microphone" />
+    <uses-feature android:name="android.hardware.camera2" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyApplication"
+        android:usesCleartextTraffic="true"
+        tools:ignore="UnusedAttribute">
+        <activity android:name=".who.Activities.ConfirmActivity"></activity>
+        <activity android:name=".who.Activities.StoryMainActivity"></activity>
+        <activity android:name=".who.VideoCall.AgoraCall.InCall" />
+        <activity android:name=".who.VideoCall.AgoraCall.RandomCall" />
+        <activity android:name=".who.Activities.Profile.Settings" />
+        <activity android:name=".who.Activities.Profile.EditProfile" />
+        <activity android:name=".who.Activities.Profile.Edit" />
+        <activity android:name=".who.Activities.Profile.ViewPost" />
+        <activity android:name=".who.ChatRoom.ChatRoom" />
+        <activity android:name=".who.Activities.Profile.UserProfile" />
+        <activity android:name=".who.Activities.LiveStreaming.LiveStreamActivity" />
+        <activity android:name=".who.Activities.LiveStreaming.OutGoingLiveStream" />
+        <activity android:name=".who.Purchase.Prchase_MainActivity" />
+        <activity android:name=".who.Activities.Profile.BlockedUsers" />
+        <activity android:name=".who.Activities.Payments" />
+        <activity android:name=".who.Activities.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- <activity -->
+        <!-- android:name="com.come.live.who.VideoCall.callActivity" -->
+        <!-- android:exported="true" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name=".who.Activities.StoriesContentActivity"
+            android:exported="true" />
+        <activity
+            android:name=".who.VideoCall.videoCall"
+            android:exported="true" />
+        <activity
+            android:name=".who.Activities.Authentication"
+            android:exported="true" />
+        <activity
+            android:name=".who.Activities.MainActivity"
+            android:exported="true" />
+
+        <service android:name=".who.Service.Service">
+            <intent-filter>
+                <action android:name="com.portfolio.myapplication.who.Service" />
+            </intent-filter>
+        </service>
+
+        <receiver
+            android:name=".who.Service.BootReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:label="BootReceiver">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <receiver android:name=".Receiver.CallReceiver" />
+    </application>
+
+</manifest>

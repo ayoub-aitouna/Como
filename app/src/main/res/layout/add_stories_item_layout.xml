@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="90dp"
+    android:layout_height="90dp"
+    android:gravity="center">
+
+
+    <ImageView
+        android:id="@+id/storiesImg"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:background="@drawable/category_raduis"
+        android:backgroundTint="#454545"
+        android:paddingHorizontal="5dp"
+        android:src="@drawable/add" />
+
+    <ProgressBar
+        android:id="@+id/progress"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/circle_shape"
+        android:progress="10"
+        android:layout_centerInParent="true"
+        android:indeterminateDrawable="@drawable/circle_progress_foreground"
+        android:visibility="gone" />
+
+</RelativeLayout>
